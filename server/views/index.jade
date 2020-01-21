@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(name="add-estimation", enctype="multipart/form-data", method="post")
+        div.input
+            span.label Title
+            input(type="text", name="title")
+        br    
+        div.input
+            span.label File
+            input(type="file", name="image", accept="image/*", required)
+        br
+        div.actions
+            input(type="submit", value="Evaluate")
